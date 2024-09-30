@@ -33,7 +33,7 @@ Rectangle
             anchors.right : parent.right
             anchors.bottom : parent.bottom
             anchors.margins: 35
-            text: qsTr("texttt")
+            text: qsTr("0")
         }
         Text {
             id: beforeNum
@@ -42,9 +42,31 @@ Rectangle
             anchors.right : parent.right
             anchors.bottom: nowNum.top
             anchors.rightMargin: 35
-            text: qsTr("texttt")
+            text: qsTr("0")
         }
     
-    
-    
+    Connections
+    {
+        target: processCalculating
+        onSendToQml:
+        {
+            nowNum.text = resultNum;
+        }
     }
+    Connections
+    {
+        target: processCalculating
+        onSendToBeforeNum:
+        {
+            beforeNum.text = bN;
+        }
+    }
+    Connections
+    {
+        target: processCalculating
+        onSendToNowNum:
+        {
+            nowNum.text = nN;
+        }
+    }
+}

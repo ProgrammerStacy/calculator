@@ -36,7 +36,7 @@ GridLayout{
                 }
                 NumBttn
                 {
-                    buttonText: qsTr("÷")
+                    buttonText: qsTr("/")
                 }
     
                 NumBttn {
