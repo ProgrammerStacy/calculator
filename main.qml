@@ -7,6 +7,10 @@ Window {
     id : win
     width: 360
     height: 640
+    minimumWidth: 360
+    maximumWidth: 360
+    minimumHeight: 640
+    maximumHeight: 640
     visible: true
     title: qsTr("Calculator")
     color: "#024873"
@@ -14,7 +18,10 @@ Window {
     ColumnLayout
     {
         id : layoutFirst
-        spacing: 30
+        spacing: 0
+        StatusBar {
+            id: statusBar
+        }
         Display {
             id: display
         }

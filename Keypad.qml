@@ -8,6 +8,7 @@ GridLayout{
                 columnSpacing: 18
                 rowSpacing: 18
                 Layout.leftMargin: 30
+                Layout.topMargin: 30
                 NumBttn
                 {
                     buttonText: qsTr("()")

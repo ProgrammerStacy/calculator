@@ -4,5 +4,6 @@
         <file>Display.qml</file>
         <file>Keypad.qml</file>
         <file>NumBttn.qml</file>
+        <file>StatusBar.qml</file>
     </qresource>
 </RCC>

@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.15
 Rectangle
         {
         id: dspl
-        width: 360
+        width: win.width
         height: 156
         color : "#04BFAD"
         radius: 25
@@ -15,7 +15,7 @@ Rectangle
         Rectangle
         {
             id: clipper
-            width: 360
+            width: parent.width
             height: 100
             color : "#04BFAD"
             clip: true
