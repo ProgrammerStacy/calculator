@@ -12,7 +12,6 @@ Window {
     ColumnLayout
     {
         id : layoutFirst
-        anchors.fill: parent
         spacing: 30
         Display {
             id: display
@@ -30,6 +29,7 @@ Window {
         {
             id: back
             text: "Назад"
+            anchors.centerIn: parent
             onClicked:
             {
                 dialog.close();

@@ -14,19 +14,17 @@ void ProcessCalculating::itIsSecret(QString str)
     if (str == "=")
     {
         timer.start();
-        qDebug() << true;
     }
-
 }
 
 void ProcessCalculating::receiveFromQml(QString str)
 {
-    if (timer.isActive())
+    if (timer.isActive()) // проверка если таймер еще активен, то пользователь вводит код
     {
         secretCode += str;
         if (secretCode == "123")
         {
-            qDebug() << "Right";
+            str = "";
             emit secretMenuActive();
         }
     }
