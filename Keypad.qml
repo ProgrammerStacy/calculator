@@ -11,18 +11,22 @@ GridLayout{
                 NumBttn
                 {
                     buttonText: qsTr("()")
+                    buttonIcon: "img/bkt.png"
                 }
                 NumBttn
                 {
                     buttonText: qsTr("+/-")
+                    buttonIcon: "img/plus_minus.png"
                 }
                 NumBttn
                 {
                     buttonText: qsTr("%")
+                    buttonIcon: "img/percent.png"
                 }
                 NumBttn
                 {
-                    buttonText: qsTr("x")
+                    buttonText: qsTr("/")
+                    buttonIcon: "img/division.png"
                 }
     
                 NumBttn {
@@ -36,7 +40,8 @@ GridLayout{
                 }
                 NumBttn
                 {
-                    buttonText: qsTr("/")
+                    buttonText: qsTr("x")
+                    buttonIcon: "img/multiplication.png"
                 }
     
                 NumBttn {
@@ -51,6 +56,7 @@ GridLayout{
                 NumBttn
                 {
                     buttonText: qsTr("-")
+                    buttonIcon: "img/minus.png"
                 }
     
                 NumBttn {
@@ -65,6 +71,7 @@ GridLayout{
                 NumBttn
                 {
                     buttonText: qsTr("+")
+                    buttonIcon: "img/plus.png"
                 }
     
                 NumBttn
@@ -82,5 +89,6 @@ GridLayout{
                 NumBttn
                 {
                     buttonText: qsTr("=")
+                    buttonIcon: "img/equal.png"
                 }
             }

@@ -53,15 +53,15 @@ void ProcessCalculating::receiveFromQml(QString str)
     }
     else if (str == "+/-")
     {
-        if (nN != 0)
+        if (nN != "0")
         {
-            nN = QString::number(nN.toInt() * -1);
+            nN = QString::number(nN.toDouble() * -1);
             emit sendToNowNum(nN);
         }
     }
     else if (str == "%")
     {
-        nN = QString::number(nN.toInt() * 0.01);
+        nN = QString::number(nN.toDouble() * 0.01);
         emit sendToNowNum(nN);
     }
     else if (str == "C")

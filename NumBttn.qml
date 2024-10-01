@@ -7,6 +7,7 @@ Item  {
         width: 60
         height: 60
         property alias buttonText : t.text
+        property alias buttonIcon : img.source
         signal clicked(string text)
 
         Rectangle
@@ -20,10 +21,14 @@ Item  {
                         anchors.centerIn: parent
                         font.pixelSize: 24
                     }
+                    Image {
+                        id: img
+                        anchors.centerIn: parent
+                    }
                     color: if (t.text == "1" ||
                                 t.text == "2" || t.text == "3" || t.text == "4" ||
                                 t.text == "5" || t.text == "6" || t.text == "7" || t.text == "8" ||
-                                t.text == "9")
+                                t.text == "9" || t.text == "0"|| t.text == ".")
                             {
                                t.color = "#024873";
                                return mouseArea.containsPress ? "#04BFAD" : "#B0D1D8"
@@ -35,7 +40,7 @@ Item  {
                             }
                             else
                             {
-                               t.color = "white";
+                               t.color = "transparent";
                                return mouseArea.containsPress ? "#F7E425" : "#0889A6";
                             }
     
