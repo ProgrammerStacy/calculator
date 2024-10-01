@@ -21,6 +21,29 @@ Window {
             id: grid
         }
     }
+    Dialog {
+        id: dialog
+        modal: true
+        anchors.centerIn: parent
+        title: "Секретное меню!"
+        Button
+        {
+            id: back
+            text: "Назад"
+            onClicked:
+            {
+                dialog.close();
+            }
+        }
+    }
+    Connections
+    {
+        target: processCalculating
+        onSecretMenuActive:
+        {
+            dialog.open();
+        }
+    }
 
 
 

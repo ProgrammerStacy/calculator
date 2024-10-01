@@ -6,10 +6,30 @@ ProcessCalculating::ProcessCalculating(QObject *parent) : QObject(parent)
     resultNum = 0; //обнуляем все в конструкторе
     bN = "";
     nN = "";
+    timer.setInterval(5000);
+    secretCode = "";
+}
+void ProcessCalculating::itIsSecret(QString str)
+{
+    if (str == "=")
+    {
+        timer.start();
+        qDebug() << true;
+    }
+
 }
 
 void ProcessCalculating::receiveFromQml(QString str)
 {
+    if (timer.isActive())
+    {
+        secretCode += str;
+        if (secretCode == "123")
+        {
+            qDebug() << "Right";
+            emit secretMenuActive();
+        }
+    }
     if (str == "0" || str == "1" || str == "2" || str == "3" || // если была нажата кнопка с цифрой, то мы продолжаем запись числа
         str == "4" || str == "5" || str == "6" || str == "7" ||
         str == "8" || str == "9" || str == ".")

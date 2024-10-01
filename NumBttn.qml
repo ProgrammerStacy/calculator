@@ -3,13 +3,14 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 Item  {
-                id: bttn
-                width: 60
-                height: 60
-                property alias buttonText : t.text
-                signal clicked(string text)
-                Rectangle
-                {
+        id: bttn
+        width: 60
+        height: 60
+        property alias buttonText : t.text
+        signal clicked(string text)
+
+        Rectangle
+            {
                     id: base
                     anchors.fill: parent
                     radius: parent.height / 2
@@ -42,14 +43,19 @@ Item  {
                     {
                         id: mouseArea
                         anchors.fill: parent
+                        pressAndHoldInterval: 4000
                         onClicked:
                         {
                             processCalculating.receiveFromQml(t.text);
                         }
+                        onPressAndHold:
+                        {
+                            processCalculating.itIsSecret(t.text);
+                        }
                     }
-    
-    
-                }
+            }
+
+
     
         
-        }
+}
