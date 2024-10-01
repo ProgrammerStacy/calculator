@@ -9,6 +9,7 @@ SOURCES += \
         processcalculating.cpp
 
 RESOURCES += qml.qrc \
+    font.qrc \
     pictureButton.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model

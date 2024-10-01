@@ -8,9 +8,10 @@ Rectangle
         width: 360
         height: 156
         color : "#04BFAD"
-        radius: 50
+        radius: 25
         property alias nowN: nowNum.text
         property alias beforeN: beforeNum.text
+
         Rectangle
         {
             id: clipper
@@ -19,7 +20,7 @@ Rectangle
             color : "#04BFAD"
             clip: true
             Rectangle {
-                id: clippedleft
+                id: clipped
                 width: parent.width + radius
                 height: parent.height + radius
                 radius: dspl.radius
@@ -29,11 +30,13 @@ Rectangle
         Text {
             id: nowNum
             color: "white"
-            font.pixelSize: 36
+            font.pixelSize: 50
             anchors.right : parent.right
             anchors.bottom : parent.bottom
-            anchors.margins: 35
+            anchors.rightMargin: 35
+            anchors.topMargin: 35
             text: qsTr("0")
+            font.family: "Open Sans Semibold"
         }
         Text {
             id: beforeNum
@@ -43,7 +46,10 @@ Rectangle
             anchors.bottom: nowNum.top
             anchors.rightMargin: 35
             text: qsTr("0")
+            font.family: "Open Sans Semibold"
         }
+
+
     
     Connections
     {
@@ -69,4 +75,9 @@ Rectangle
             nowNum.text = nN;
         }
     }
+
+
+
+
+
 }

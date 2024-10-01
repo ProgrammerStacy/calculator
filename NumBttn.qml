@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+
 Item  {
         id: bttn
         width: 60
@@ -20,6 +21,7 @@ Item  {
                         text: qsTr("T")
                         anchors.centerIn: parent
                         font.pixelSize: 24
+                        font.family: "Open Sans Semibold"
                     }
                     Image {
                         id: img

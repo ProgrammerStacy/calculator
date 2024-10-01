@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/font">
+        <file>Open_Sans.ttf</file>
+    </qresource>
+</RCC>
